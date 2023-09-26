@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Manrope;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: hsl(210, 46%, 95%);
+  color: hsl(212, 23%, 69%);
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+main .component {
+  max-width: 325px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 4px 0 30px hsl(212, 23%, 69%);
+}
+main .component img {
+  width: 100%;
+  height: 200px;
+}
+
+section {
+  margin: 0 30px;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+section h1 {
+  margin-top: 28px;
+  font-size: 16px;
+  color: hsl(214, 17%, 35%);
+}
+section h1 + p {
+  margin-top: 14px;
+}
+
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 30px 0 0;
+}
+.article-footer .writer {
+  display: flex;
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+}
+.article-footer .writer img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.article-footer .writer p.name {
+  color: hsl(214, 17%, 35%);
+  font-weight: 700;
+}
+.article-footer #share-tooltip-toggle {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: hsl(210, 46%, 95%);
+  align-self: center;
+  border-radius: 50%;
+  color: hsl(214, 17%, 35%);
+  z-index: 2;
+}
+.article-footer .share-tooltip {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+  width: 100%;
+  height: 70px;
+  padding-left: 30px;
+  background-color: hsl(217, 19%, 35%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.article-footer .share-tooltip span {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.article-footer .share-tooltip img {
+  width: 18px;
+  height: 18px;
+}
+
+.page-footer {
+  text-align: center;
+  margin-bottom: 10px;
+  color: hsl(217, 19%, 35%);
+}
+.page-footer a {
+  color: black;
+}/*# sourceMappingURL=style.css.map */
