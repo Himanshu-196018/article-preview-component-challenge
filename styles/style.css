@@ -20,7 +20,7 @@ main {
   min-height: 100vh;
 }
 main .component {
-  max-width: 325px;
+  width: 325px;
   height: 500px;
   background-color: white;
   border-radius: 10px;
@@ -52,7 +52,7 @@ section h1 + p {
   justify-content: space-between;
   align-content: center;
   flex-wrap: wrap;
-  margin: 30px 0 0;
+  margin-top: 30px;
 }
 .article-footer .writer {
   display: flex;
@@ -80,8 +80,15 @@ section h1 + p {
   color: hsl(214, 17%, 35%);
   z-index: 2;
 }
+.article-footer #share-tooltip-toggle:hover {
+  cursor: pointer;
+}
+.article-footer #share-tooltip-toggle.active {
+  background-color: hsl(212, 23%, 69%);
+  color: white;
+}
 .article-footer .share-tooltip {
-  display: flex;
+  display: none;
   justify-content: flex-start;
   align-content: center;
   flex-wrap: wrap;
@@ -111,4 +118,51 @@ section h1 + p {
 }
 .page-footer a {
   color: black;
+}
+
+@media screen and (width > 800px) {
+  main .component {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 730px;
+    overflow: visible;
+    height: 280px;
+  }
+  main .component > img {
+    height: 100%;
+    -webkit-clip-path: inset(0 64px 0 0);
+            clip-path: inset(0 64px 0 0);
+  }
+  section {
+    margin: 32px 30px 0 -24px;
+  }
+  section h1 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: -0.7px;
+  }
+  .article-footer {
+    margin-top: 18px;
+  }
+  .article-footer #share-tooltip-toggle {
+    margin-right: 10px;
+  }
+  .article-footer .share-tooltip {
+    padding-left: 38px;
+    width: 250px;
+    height: 56px;
+    top: 46%;
+    left: 75%;
+    border-radius: 12px;
+  }
+  .article-footer .share-tooltip::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 116px;
+    border: 12px solid;
+    border-color: hsl(214, 17%, 35%) transparent transparent transparent;
+  }
 }/*# sourceMappingURL=style.css.map */
